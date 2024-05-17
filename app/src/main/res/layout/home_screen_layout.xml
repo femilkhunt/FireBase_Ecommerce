@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image"
+            android:layout_marginTop="15dp"
+            android:id="@+id/homeScreenProfilePic"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:src="@drawable/settings"
+            android:id="@+id/homeScreenSettingBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeScreenFrstTxt"
+            style="@style/HeadingTitle"
+            android:layout_below="@id/homeScreenProfilePic"
+            android:layout_marginTop="30dp"
+            android:text="Hello, Romaina!"
+            android:textSize="35sp"
+            />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/homeScreenFrstTxt"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:id="@+id/homeScreenAnnouncmentPart">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homeScreenDescriptionHeadingTxt"
+            android:layout_marginTop="20dp"
+            android:text="Announcement"
+            style="@style/HeadingTitle"
+            android:textSize="18sp"
+            />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeScreenDescriptionTxt"
+        android:layout_below="@id/homeScreenDescriptionHeadingTxt"
+        android:layout_marginTop="10dp"
+        android:text="hello,hello.hellllllllllllllooooooooooooo\nheloooooooooooooooooooooo helllooooooooooo"
+        style="@style/DescriptionText"
+        android:textSize="14sp"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/nxtbutton"
+        android:id="@id/homeScreenAnnouncmentNextBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeScreenAnnouncmentPart"
+            android:layout_marginTop="25dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeScreenMYORDERTxt"
+                android:text="My Order"
+                style="@style/HeadingTitle"
+                android:textSize="25sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/homeScreenOrderLayout"
+                android:layout_below="@id/homeScreenMYORDERTxt">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/homeScreenToPayBtn"
+                    style="@style/textBg"
+                    android:text="TO Pay"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/midgrey"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/homeScreenToReciveBtn"
+                    style="@style/textBg"
+                    android:text="TO Recive"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/midgrey"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/homeScreenToReviewBtn"
+                    style="@style/textBg"
+                    android:text="TO Review"
+                    android:textSize="18sp"
+                    android:backgroundTint="@color/midgrey"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stories"
+                style="@style/HeadingTitle"
+                android:layout_below="@id/homeScreenOrderLayout"
+                android:layout_marginTop="20sp"
+                android:textSize="25sp"
+                android:id="@+id/homeScreenStoriesTxt"
+                />
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
+                android:layout_below="@id/homeScreenStoriesTxt"
+                android:layout_marginTop="20dp"
+                android:id="@+id/homeScreenViewPager"
+                />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

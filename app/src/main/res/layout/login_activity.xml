@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:scaleType="fitXY"
+        android:src="@drawable/bubbles_login_screen_img" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginAccFrstTxt"
+        android:text="Login"
+        style="@style/HeadingTitle"
+        android:layout_marginTop="350dp"
+        android:textSize="52dp"
+        android:layout_marginStart="20dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginAccSecndTxt"
+        android:text="Good to see you back!  "
+        android:textColor="@color/black"
+        android:layout_below="@id/loginAccFrstTxt"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:textSize="19sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginAccHeartImg"
+        android:src="@drawable/heart"
+        android:layout_toEndOf="@id/loginAccSecndTxt"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/loginAccFrstTxt"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/loginAccLinerLayout"
+        android:layout_below="@id/loginAccSecndTxt"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:id="@+id/loginAccEmailBtn"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/BtnSubmit"
+            android:layout_marginTop="40dp"
+            android:hint="Next"
+            android:textColorHint="@color/white"
+            android:background="@color/blue"
+            android:textSize="16sp"
+            android:id="@+id/loginAccNextBtn"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginAccCancelBtn"
+            android:text="Cancel"
+            android:textAlignment="center"
+            android:textColor="@color/mildblack"
+            android:layout_marginTop="20dp"
+            android:textSize="17sp"
+            />
+
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

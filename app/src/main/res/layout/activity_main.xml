@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<androidx.appcompat.widget.AppCompatImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ellipse_bg"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="220dp"
+    android:id="@+id/mainScreenBgImage"
+    />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bag_img_main_screen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:id="@+id/mainScreenBagImage"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/HeadingTitle"
+        android:text="Shoppe"
+        android:layout_below="@id/mainScreenBagImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="47sp"
+        android:textColor="@color/black"
+        android:id="@+id/mainScreenShoppeTitle"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainScreenScndText"
+        android:layout_below="@id/mainScreenShoppeTitle"
+        android:layout_centerHorizontal="true"
+        android:text="Beautiful eCommerce UI Kit\nfor your Online Store"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BtnSubmit"
+        android:id="@+id/mainScreenNextBtn"
+        android:layout_below="@id/mainScreenScndText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:background="@color/blue"
+        android:text="Let's get Started"
+        android:textColor="@color/white"
+        android:fontFamily="@font/nunitosans_10pt_black"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainScreenLoginBtn"
+        android:layout_below="@id/mainScreenNextBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="I Already Have An Account"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>
