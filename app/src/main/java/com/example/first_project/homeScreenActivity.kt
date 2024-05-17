@@ -10,7 +10,7 @@ class homeScreenActivity : AppCompatActivity() {
 
 
         lateinit var viewPager : ViewPager
-        lateinit var viewAdapter : viewAdapter
+        lateinit var adapter : viewAdapter
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +24,8 @@ class homeScreenActivity : AppCompatActivity() {
 
         var productSummary = productSummary(productImg.toString(),productHeading.toString(),productPrice.toString())
 
-    viewAdapter = viewAdapter()
+    adapter = viewAdapter(this,productSummary)
+
 
     }
 }
