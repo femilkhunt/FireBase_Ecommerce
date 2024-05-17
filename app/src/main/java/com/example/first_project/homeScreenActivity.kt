@@ -21,6 +21,7 @@ class homeScreenActivity : AppCompatActivity() {
         var productHeading = findViewById<AppCompatImageView>(R.id.homeScreenProductHeading)
         var productPrice = findViewById<AppCompatImageView>(R.id.homeScreenProductPrice)
 
+
         var productSummary = productSummary(productImg.toString(),productHeading.toString(),productPrice.toString())
 
     viewAdapter = viewAdapter()
