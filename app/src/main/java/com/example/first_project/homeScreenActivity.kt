@@ -50,7 +50,7 @@ class homeScreenActivity : AppCompatActivity() {
                    productHeading.setText(snapshot.child("posts").child("0").child("title").getValue().toString())
                    productPrice.setText(snapshot.child("posts").child("0").child("price").getValue().toString())
 
-                Glide.with(Context).load(img).into(productImg)
+                Glide.with(this@homeScreenActivity).load(img).into(productImg)
             }
 
             override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {

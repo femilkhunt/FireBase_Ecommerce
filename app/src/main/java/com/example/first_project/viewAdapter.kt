@@ -10,21 +10,23 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.first_project.homeScreenActivity
+import com.example.first_project.homeScreenActivity as homeScreenActivity1
 
 
-class viewAdapter(var homeScreen: homeScreenActivity, var productSummary: productSummary) : PagerAdapter(){
+class viewAdapter( var productSummary: productSummary) : PagerAdapter(){
 
     var layoutInflater : LayoutInflater? = null
 
     @SuppressLint("MissingInflatedId")
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        layoutInflater = LayoutInflater.from(homeScreen)
+        layoutInflater = LayoutInflater.from(Context)
         var view = layoutInflater!!.inflate(R.layout.home_screen_layout,container,false)
         var img = view.findViewById<AppCompatImageView>(R.id.homeScreenProductImage)
         var heading = view.findViewById<AppCompatTextView>(R.id.homeScreenProductHeading)
         var price = view.findViewById<AppCompatTextView>(R.id.homeScreenProductPrice)
 
-       Glide.with(Context)
+       Glide.with(container).load(.toString()).into(img)
 
 
         return view
