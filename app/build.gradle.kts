@@ -59,11 +59,11 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-database")
 
-    implementation ("androidx.viewpager2:viewpager2:1.1.0")
-    implementation ("me.relex:circleindicator:2.1.6")
-    implementation ("com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3")
+//    implementation ("androidx.viewpager2:viewpager2:1.1.0")
+//    implementation ("me.relex:circleindicator:2.1.6")
+//    implementation ("com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3")
 
     //glide dependencis for image loader
-    implementation ("com.github.bumptech.glide:glide:4.9.0")
+    implementation ("com.github.bumptech.glide:glide:4.14.2")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 }
