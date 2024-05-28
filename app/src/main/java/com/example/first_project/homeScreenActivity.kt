@@ -14,6 +14,8 @@ import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.getValue
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.database.ChildEventListener as ChildEventListener1
@@ -45,35 +47,65 @@ class homeScreenActivity : AppCompatActivity() {
         recycleview.layoutManager = LinearLayoutManager(this)
         recycleview.adapter = dataForAdapter
 
-        database.child("posts").get().addOnSuccessListener {
-            Toast.makeText(this,"Yesss",Toast.LENGTH_SHORT).show()
-           database.addChildEventListener(object : ChildEventListener{
-               override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
-                   TODO("Not yet implemented")
-               }
 
-               override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
-                   var img : String = snapshot.child("posts").child("0").child("imageUrl").getValue().toString()
-                   productHeading.setText(snapshot.child("posts").child("0").child("title").getValue().toString())
-                   productPrice.setText(snapshot.child("posts").child("0").child("price").getValue().toString())
+        val dataTaker = object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                    productsummaray.addAll(productsummaray)
+//                snapshot.child("posts").get
+                Toast.makeText(this@homeScreenActivity,"YessssssssssssYesss",Toast.LENGTH_SHORT).show()
+            }
 
-                   productsummaray.addAll()
-               }
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(this@homeScreenActivity,"Noooooo",Toast.LENGTH_SHORT).show()
 
-               override fun onChildRemoved(snapshot: DataSnapshot) {
-                   TODO("Not yet implemented")
-               }
+            }
 
-               override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
-                   TODO("Not yet implemented")
-               }
-
-               override fun onCancelled(error: DatabaseError) {
-                   TODO("Not yet implemented")
-               }
-
-           }
         }
+
+       database.child("posts").get().addOnSuccessListener {
+//           productsummaray = it.children
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+//        database.child("posts").get().addOnSuccessListener {
+//            Toast.makeText(this,"Yesss",Toast.LENGTH_SHORT).show()
+//           database.addChildEventListener(object : ChildEventListener{
+//               override fun onChildAdded(snapshot: DataSnapshot, previousChildName: String?) {
+//                   TODO("Not yet implemented")
+//               }
+//
+//               override fun onChildChanged(snapshot: DataSnapshot, previousChildName: String?) {
+//                   var img : String = snapshot.child("posts").child("0").child("imageUrl").getValue().toString()
+//                   productHeading.setText(snapshot.child("posts").child("0").child("title").getValue().toString())
+//                   productPrice.setText(snapshot.child("posts").child("0").child("price").getValue().toString())
+//
+//                   productsummaray.addAll()
+//               }
+//
+//               override fun onChildRemoved(snapshot: DataSnapshot) {
+//                   TODO("Not yet implemented")
+//               }
+//
+//               override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
+//                   TODO("Not yet implemented")
+//               }
+//
+//               override fun onCancelled(error: DatabaseError) {
+//                   TODO("Not yet implemented")
+//               }
+//
+//           }
+//        }
 
 //        adapter = viewAdapter(this, productSummary)
 
