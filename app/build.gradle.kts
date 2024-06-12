@@ -64,6 +64,9 @@ dependencies {
 //    implementation ("com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3")
 
     //glide dependencis for image loader
+
+    implementation ("com.squareup.picasso:picasso:2.8")
+
     implementation ("com.github.bumptech.glide:glide:4.14.2")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 }

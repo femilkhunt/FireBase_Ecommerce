@@ -7,6 +7,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.squareup.picasso.Picasso
 
 
 class recycleAdapter(var productsummary: ArrayList<productSummary>) :
@@ -20,7 +21,7 @@ class recycleAdapter(var productsummary: ArrayList<productSummary>) :
     override fun onBindViewHolder(holder: recycleAdapter.ViewHolder, position: Int) {
         var data = productsummary[position]
 
-//        Glide.with(this)
+        Picasso.get().load(productsummary[position].productimg).into(holder.img)
         holder.heading.text = productsummary[position].productheading
         holder.price.text = productsummary[position].productprice
 
